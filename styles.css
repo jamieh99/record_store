@@ -1,26 +1,22 @@
 body {
-    margin: 0;
-    padding: 0;
-	max-width: 100%;
-	font-family: Rockwell, Times New Roman, Georgia, serif;
+    max-width: 100%;
+	font-family: Roboto, Times New Roman, Georgia, serif;
 	font-size: 14pt;
-    
-    /*background-color: #1F2937;*/
-    background-color: #7A593E;
+    background-color:#7A593E;
     display: flex;
     flex-direction: column;
-    
+    margin: 0;
+
 }
+    
 
 .navigation {
-    background-color: #7A593E;
+    flex-basis: auto;
+    background-color:#7A593E;
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
         
 }
 
@@ -31,6 +27,7 @@ body {
     align-items: center;
     padding: 0px;
     margin: 0;
+    
   }
 .logo {
     width: 100px;
@@ -48,23 +45,24 @@ body {
     text-decoration: none;
     margin-left: 50px;
     
+    
 }
 
 .hero-image {
     background-image: url("./images/banner3.jpg");
     background-color: #cccccc;
     height: 500px;
-    background-position: center;
+    /*background-position: center;*/
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     display: flex;
     /*flex-direction: column;*/
-   
+    align-self: center;
+       
 }
 
 .hero-text {
-    /*align-self:flex-start;*/
     font-size: 50px;
     color: white;
     margin-top: auto;
@@ -72,23 +70,20 @@ body {
     font-style: oblique;
     margin-right: auto;
     margin-left: 10px;
-   /* width: 100%;
-    flex: 1;*/
+   
 }
 
 .hero-image .shop {
     align-self: flex-end;
-    /*background-color: #D09269;*/
     width: 150x;
     height: 50px;
     padding: 20px;
-    margin-right: 10px;
+    margin-right: 0;
 }
 
 button {
     border-radius: 12px;
     background-color: #FF9E4D;
-    /*background-color: #3882F6;*/
     color: white;
     font-size: 20px;
     border: 2px solid white;
@@ -99,9 +94,7 @@ button {
 .main {
     display: flex;
     justify-content: center;
-    gap: 50px;
     background-color: #C49152;
-    padding: 10px;
     width: 100%;
 }
 
@@ -110,45 +103,218 @@ button {
     flex-direction: column;
     gap: 20px;
     border: 2px solid white;
-    width: 300px;
+    /*width: 300px;*/
+    width: 33%;
 }
 
 .main .testimonials div {
-    width: 100px;
-    width: 300px;
+    width: 200px;
     align-self: center;
+    border: 2px solid white;
 }
 
 .main .albums {
     display: flex;
     flex-direction: column;
     border: 2px solid white;
+    width: 34%;
+    
     
 }
 .main .albums .col1 {
+    flex:1;
     border: 2px solid white;
+    display: flex;
+    flex-direction: row;
+}
+
+.main .albums .col1 .row1 {
+    width:50%;
+    height: 100%;
+    border: 2px solid white;
+    align-self: center;
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .albums .col1 .row1 .title {
     flex-grow: 1;
+    align-self: center;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+.main .albums .col1 .row1 .album-image {
+    flex-grow: 1;
+    align-self: center;
+    width: 236px;
+    
+}
+
+.main .albums .col1 .row1 .artist {
+    flex-grow: 1;
+    align-self: center;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.main .albums .col1 .row1 .price {
+    flex-grow: 1;
+    align-self: center;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.main .albums .col1 .row2 {
+    width:50%;
+    height: 100%;
+    border: 2px solid white;
+    align-self: center;
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .albums .col1 .row2 .title {
+    flex-grow: 1;
+    align-self: center;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+
+}
+
+.main .albums .col1 .row2 .album-image {
+    flex-grow: 1;
+    align-self: center;
+    width: 236px;
+}
+
+.main .albums .col1 .row2 .artist {
+    flex-grow: 1;
+    align-self: center;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.main .albums .col1 .row2 .price {
+    flex-grow: 1;
+    align-self: center;
+    height: 10%;
+    width: 100%;
+    text-align: center;
 }
 
 .main .albums .col2 {
+    flex:1;
     border: 2px solid white;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
 }
 
-
-.main .albums div {
+.main .albums .col2 .row1 {
+    width:50%;
+    height: 100%;
+    border: 2px solid white;
+    align-self: center;
+    flex-grow:1;
     display: flex;
-    gap: 50px;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
+}
 
+.main .albums .col2 .row1 .title {
+    flex-grow: 1;
+    align-self: center;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+
+}
+
+.main .albums .col2 .row1 .album-image {
+    flex-grow: 1;
+    align-self: center;
+    width: 236px;
+}
+
+.main .albums .col2 .row1 .artist {
+    flex-grow: 1;
+    align-self: center;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.main .albums .col2 .row1 .price {
+    flex-grow: 1;
+    align-self: center;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.main .albums .col2 .row2 {
+    width:50%;
+    height: 100%;
+    border: 2px solid white;
+    align-self: center;
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .albums .col2 .row2 .title {
+    flex-grow: 1;
+    align-self: center;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+
+}
+
+.main .albums .col2 .row2 .album-image {
+    flex-grow: 1;
+    align-self: center;
+    width: 236px;
+}
+
+.main .albums .col2 .row2 .artist {
+    flex-grow: 1;
+    align-self: center;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.main .albums .col2 .row2 .price {
+    flex-grow: 1;
+    align-self: center;
+    height: 10%;
+    width: 100%;
+    text-align: center;
 }
 .main .about {
     display: flex;
     flex-direction: row;
     background-color: #F8D08B;
     border: 2px solid white;
-    width: 500px;
+    width: 33%;
 }
 
 .main .about .about-text {
@@ -169,13 +335,15 @@ button {
 }
 
 footer {
+    flex-basis: auto;
     display: flex;
     bottom: 0;
-    height: 50px;
+    height: 70px;
     width: 100%;
     justify-content: center;
     background-color: #1F2937;
     gap: 150px;
+    
     
 }
 
